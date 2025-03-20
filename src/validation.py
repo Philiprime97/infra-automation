@@ -107,20 +107,3 @@ def IP_Validation(IP):
              IP=input("Please enter a valid IP-Address [ Format : 0-255.0-255.0-255.0-255 ] : ")
 
 
-     
-
-
-
-         
-
-
-
-            
-# while True:
-#         try:
-#             if Name.lower() in ("lion", "dog", "cat"):  # Check for invalid names
-#                 raise ValueError("The name can't be an animal. Please rename it.")  # Raise an error
-#             return Name  # Return valid name
-#         except ValueError as e:
-#             print(e)  # Print error message
-#             Name = input("Enter a new name: ").strip()  # Ask for a valid name
