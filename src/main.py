@@ -21,8 +21,6 @@ while True:
         Disk = Disk_Validation(input("Enter Disk Storage ( 0 - 500 )GB : "))
         IP = IP_Validation(input("Enter an IP Adress ( 0-255.0-255.0-255.0-255 ) : "))
 
-
-        
         VM_info["Name"] = Name
         VM_info["OS"] = OS
         VM_info["CPU"] = CPU
@@ -54,5 +52,7 @@ while True:
 print(f"\n{count} VMs created !")
 print("\nFinal List of Created VMs:", VMs)
 
+
+# Saves only if VMs list exists
 if VMs:
-    save_to_json(VMs)  # Saves only if VMs list exists
+    save_to_json(VMs)  
