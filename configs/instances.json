@@ -1,0 +1,29 @@
+[
+    {
+        "Name": "pc89",
+        "OS": "Mac",
+        "CPU": 34,
+        "GPU": "AMD",
+        "RAM": "45GB",
+        "Disk": "43GB",
+        "IP": "1.1.1.1"
+    },
+    {
+        "Name": "PC34",
+        "OS": "Mac",
+        "CPU": 54,
+        "GPU": "AMD",
+        "RAM": "54GB",
+        "Disk": "34GB",
+        "IP": "1.1.1.1"
+    },
+    {
+        "Name": "PC24",
+        "OS": "Windows",
+        "CPU": 54,
+        "GPU": "Intel",
+        "RAM": "76GB",
+        "Disk": "23GB",
+        "IP": "2.2.2.2"
+    }
+]
