@@ -25,5 +25,14 @@
         "RAM": "76GB",
         "Disk": "23GB",
         "IP": "2.2.2.2"
+    },
+    {
+        "Name": "server90",
+        "OS": "Linux",
+        "CPU": 23,
+        "GPU": "Nvidia",
+        "RAM": "2GB",
+        "Disk": "344GB",
+        "IP": "3.3.3.3"
     }
 ]

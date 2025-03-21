@@ -1,38 +1,5 @@
 from validation import Name_Validation,OS_Validation,CPU_Validation,GPU_Validation,RAM_Validation,Disk_Validation,IP_Validation
-import json
-import os
-
-
-
-CONFIG_FILE = "configs/instances.json"
-
-def save_to_json(data):
-    """Save machine data to configs/instances.json."""
-    
-    # 1. Ensure the 'configs' folder exists
-    os.makedirs("configs", exist_ok=True)  
-	    # "configs" → The name of the folder to create.
-        # exist_ok=True → If the folder already exists, don’t throw an error.
-    
-    # 2. Try to read existing data from the JSON file
-    try:
-        with open(CONFIG_FILE, "r") as file:
-            instances = json.load(file)  # Load existing data
-    except (FileNotFoundError, json.JSONDecodeError):
-        instances = []  # If file doesn't exist, start with an empty list
-    
-    # 3. Add new machine data
-    instances.extend(data)
-    
-    # 4. Save updated list back to the file
-    with open(CONFIG_FILE, "w") as file:
-        json.dump(instances, file, indent=4)  # Pretty-print JSON
-    
-    print("\nSaving File Procces started...")
-    print(f"Saved to {CONFIG_FILE}")
-    print("Done !")
-
-
+from saving_to_json import save_to_json
 
 
 VMs = []  # Store multiple VM configurations in a List.
@@ -62,7 +29,7 @@ while True:
         VM_info["GPU"] = GPU
         VM_info["RAM"] = f"{RAM}GB"
         VM_info["Disk"] = f"{Disk}GB"
-        VM_info["IP"] = str(IP) # with out 'str', an error will accur : 'Object of type IPv4Address is not JSON serializable.'
+        VM_info["IP"] = str(IP) # without 'str', an error will accur : 'Object of type IPv4Address is not JSON serializable.'
 
         count += 1
         VMs.append(VM_info)
@@ -74,8 +41,6 @@ while True:
 
         # for key,value in VM_info.items():
         #     print(type(f"{key} : {value}"))
-
-        
 
 
     elif answer == "":
@@ -90,4 +55,4 @@ print(f"\n{count} VMs created !")
 print("\nFinal List of Created VMs:", VMs)
 
 if VMs:
-    save_to_json(VMs)
+    save_to_json(VMs)  # Saves only if VMs list exists
