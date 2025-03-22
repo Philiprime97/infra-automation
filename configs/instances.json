@@ -1,47 +1,29 @@
 [
     {
-        "Name": "pc89",
+        "Name": "pc01",
         "OS": "Mac",
-        "CPU": 34,
-        "GPU": "AMD",
-        "RAM": "45GB",
-        "Disk": "43GB",
-        "IP": "1.1.1.1"
-    },
-    {
-        "Name": "PC34",
-        "OS": "Mac",
-        "CPU": 54,
-        "GPU": "AMD",
-        "RAM": "54GB",
-        "Disk": "34GB",
-        "IP": "1.1.1.1"
-    },
-    {
-        "Name": "PC24",
-        "OS": "Windows",
-        "CPU": 54,
+        "CPU": 32,
         "GPU": "Intel",
-        "RAM": "76GB",
-        "Disk": "23GB",
+        "RAM": "34GB",
+        "Disk": "455GB",
+        "IP": "1.1.1.1"
+    },
+    {
+        "Name": "pc02",
+        "OS": "Linux",
+        "CPU": 54,
+        "GPU": "AMD",
+        "RAM": "23GB",
+        "Disk": "400GB",
         "IP": "2.2.2.2"
     },
     {
-        "Name": "server90",
-        "OS": "Linux",
-        "CPU": 23,
+        "Name": "pc03",
+        "OS": "Windows",
+        "CPU": 54,
         "GPU": "Nvidia",
-        "RAM": "2GB",
-        "Disk": "344GB",
+        "RAM": "24GB",
+        "Disk": "300GB",
         "IP": "3.3.3.3"
-    },
-    {
-        "Name": "pc12",
-        "OS": "Linux",
-        "CPU": 45,
-        "GPU": "AMD",
-        "RAM": "56GB",
-        "Disk": "54GB",
-        "IP": "1.1.1.2"
     }
 ]

@@ -1,0 +1,6 @@
+2025-03-22 19:11:26,090 - INFO - Machine Created : {'Name': 'pc01', 'OS': 'Mac', 'CPU': 32, 'GPU': 'Intel', 'RAM': '34GB', 'Disk': '455GB', 'IP': '1.1.1.1'}
+2025-03-22 19:11:26,091 - INFO - Data successfully saved to configs/instances.json
+2025-03-22 19:12:09,144 - INFO - Machine Created : {'Name': 'pc02', 'OS': 'Linux', 'CPU': 54, 'GPU': 'AMD', 'RAM': '23GB', 'Disk': '400GB', 'IP': '2.2.2.2'}
+2025-03-22 19:12:09,146 - INFO - Data successfully saved to configs/instances.json
+2025-03-22 19:12:32,968 - INFO - Machine Created : {'Name': 'pc03', 'OS': 'Windows', 'CPU': 54, 'GPU': 'Nvidia', 'RAM': '24GB', 'Disk': '300GB', 'IP': '3.3.3.3'}
+2025-03-22 19:12:32,970 - INFO - Data successfully saved to configs/instances.json
