@@ -66,8 +66,8 @@ class Machine():
 
 
 
-        # Return the Machine details as a dictionary.
-    def to_dict(self):
+        # Return the Machine details as a dictionary - 'to_dict' onverts the object's attributes into a dictionary for easy storage and display
+    def to_dict(self):               
         return {
             "Name":self.Name,
             "OS"  :self.OS,

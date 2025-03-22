@@ -3,7 +3,6 @@ from validation import Name_Validation,OS_Validation,CPU_Validation,GPU_Validati
 from machine import Machine
 
 
-
 VMs = []  # Store multiple VM configurations in a List.
 count = 0
 
