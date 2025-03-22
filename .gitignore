@@ -1,2 +1,2 @@
-*.log
+log/*.log
 my_venv1/
