@@ -17,8 +17,8 @@ while True:
         OS = OS_Validation(input("Choose an Operating-System : ( Windows, Linux, Mac ) : ").strip())
         CPU = CPU_Validation(input("Enter the number of cores of the CPU ( 1 - 64 ) : "))
         GPU = GPU_Validation(input("Choose GPU vendor ( Nvidia, AMD, Intel ) :  ").strip())
-        RAM = RAM_Validation(input("Enter RAM Memory ( 0 - 256 )GB :  "))
-        Disk = Disk_Validation(input("Enter Disk Storage ( 0 - 500 )GB : "))
+        RAM = RAM_Validation(input("Enter RAM Memory in GB (0 - 256) :  "))
+        Disk = Disk_Validation(input("Enter Disk Storage in GB (0 - 500) : "))
         IP = IP_Validation(input("Enter an IP Adress ( 0-255.0-255.0-255.0-255 ) : "))
 
         VM_info["Name"] = Name
