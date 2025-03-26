@@ -25,5 +25,41 @@
         "RAM": "24GB",
         "Disk": "300GB",
         "IP": "3.3.3.3"
+    },
+    {
+        "Name": "pc45",
+        "OS": "Mac",
+        "CPU": 56,
+        "GPU": "Intel",
+        "RAM": "67GB",
+        "Disk": "90GB",
+        "IP": "1.1.1.1"
+    },
+    {
+        "Name": "PC",
+        "OS": "ASD",
+        "CPU": 4,
+        "GPU": "FSD",
+        "RAM": "45GB",
+        "Disk": "43GB",
+        "IP": "3.3.3.3"
+    },
+    {
+        "Name": "PC5",
+        "OS": "Mac",
+        "CPU": 3,
+        "GPU": "AMD",
+        "RAM": "43GB",
+        "Disk": "23GB",
+        "IP": "2.2.2.2"
+    },
+    {
+        "Name": "pc5",
+        "OS": "Mac",
+        "CPU": 43,
+        "GPU": "AMD",
+        "RAM": "23GB",
+        "Disk": "32GB",
+        "IP": "2.2.2.2"
     }
 ]

@@ -1,109 +1,43 @@
+from pydantic import BaseModel,Field,IPvAnyAddress,ValidationError
 
-import ipaddress   #  IP Module for the validation function "IP_Validation"
+class VMachine(BaseModel):
 
-def Name_Validation(Name):
+    Name : str = Field(...,pattern = r'^[a-zA-Z0-9-_]+$',description ="Name format must be : [ VM name - number]")
+    OS : str = Field(...,pattern=r'^(Windows|Linux|Mac)$', description = "Operating-System must be : ( Windows, Linux, Mac )")
+    CPU : int = Field(...,ge=1,le=64,description="CPU must be between : 1 - 64")
+    GPU : str = Field(...,pattern=r'^(Nvidia|AMD|Intel)$',description = " GPU must be : ( Nvidia, AMD, Intel )")
+    RAM : int = Field(...,ge=1,le=256,description="RAM Memory must be (0 - 256)GB")
+    Disk : int = Field(...,ge=1,le=500,description="Disk Storage must be (0 - 500)GB)")
+    IP : IPvAnyAddress 
 
-        allowed_characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_"
+    # In Pydantic v2, the regex parameter has been replaced by the 'pattern' parameter in the Field() function.
 
-        while True:
-            try:
-                for i in Name:
-                        if i not in allowed_characters:
-                            raise ValueError("Invalid character found.")
-            
-                return Name  # If no issues, return the valid name.
-
-            except ValueError as e:
-                print(e)  # Prints the custom error message.
-                Name = input("Please enter a valid VM name in the format : [ VM name - number]: ").strip().lower()
-
-
-
-def OS_Validation(OS):
-        
-        OperatingSystem = ("Windows","Linux","Mac")
-
-        while True:
-            try:
-                if  OS not in OperatingSystem:
-                    raise ValueError ("Invalid Operating System entered.")
-        
-                return OS
-        
-            except ValueError as e:
-                print(e)
-                OS = input("Please enter a valid Operating-System [ Windows, Linux, Mac ] : ")
-
-
-def CPU_Validation(CPU):
-     
-        while True:
-            try:
-                  CPU = int(CPU)
-                  if 1 <= CPU <= 64 :
-                       return CPU
-                  else:
-                       raise ValueError ("Invalid number amount of cores of the CPU entered.")
-                  
-            except ValueError as e:
-                 print(e)
-                 CPU = input("Please enter a valid number amount of cores of the CPU ( 1 - 64 ) : ")
-
-
-def GPU_Validation(GPU):
-     
-        GPU_Vendors = ("Nvidia","AMD","Intel")
-
-        while True:
-            try:
-                if  GPU not in GPU_Vendors:
-                    raise ValueError ("Invalid GPU-Vendor entered.")
-        
-                return GPU
-        
-            except ValueError as e:
-                print(e)
-                GPU = input("Please enter a valid GPU-Vendor [ Nvidia, AMD, Intel ] : ")
-
-
-
-def RAM_Validation(RAM):
-     
-     while True:
-            try:
-                  RAM = int(RAM)
-                  if 1 <= RAM <= 256 :
-                       return RAM
-                  else:
-                       raise ValueError ("Invalid RAM-Memory entered.")
-                  
-            except ValueError as e:
-                 print(e)
-                 RAM = input("Please enter a valid RAM-Memory ( 0 - 256 )GB : ")
-
-
-def Disk_Validation(Disk):
-        
-        while True:
-            try:
-                  Disk = int(Disk)
-                  if 1 <= Disk <= 500 :
-                       return Disk
-                  else:
-                       raise ValueError ("Invalid Disk-Storage-Memory entered.")
-                  
-            except ValueError as e:
-                 print(e)
-                 Disk = input("Please enter a valid Disk-Storage-Memory ( 0 - 500 )GB : ")
-
-
-def IP_Validation(IP):
-     while True:
+def get_vm_input():
         try:
-                ip = ipaddress.ip_address(IP)
-                return ip
-        except ValueError as e:
-             print(e)
-             IP=input("Please enter a valid IP-Address [ Format : 0-255.0-255.0-255.0-255 ] : ")
+            # collect user input
+            Name = input("\nEnter a valid VM name in the format : [ VM name - number]: ").strip()
+            OS = input("Choose an Operating-System : ( Windows, Linux, Mac ) : ").strip()
+            CPU = int(input("Enter the number of cores of the CPU ( 1 - 64 ) : "))
+            GPU = input("Choose GPU vendor ( Nvidia, AMD, Intel ) :  ").strip()
+            RAM = int(input("Enter RAM Memory in GB (0 - 256) :  "))
+            Disk = int(input("Enter Disk Storage in GB (0 - 500) : "))
+            IP = input("Enter an IP Adress ( 0-255.0-255.0-255.0-255 ) : ")  # i removed 'int' because pydantuc handles with string automatically.
+
+            # validate inouts using pydantic
+            vm = VMachine(Name=Name,OS=OS, CPU=CPU,GPU=GPU,RAM=RAM, Disk=Disk, IP=IP)
+            print("\nVM Created Successfully:\n", vm)
+            return vm
+
+        except ValidationError as e:
+            #print("\nValidation Error:\n", e)
+            print("\nValidation Error(s):")
+            for error in e.errors():
+                    print(f"- {error['loc']}: {error['msg']}")
 
 
+        except ValueError:
+            print("\nInvalid input! Please enter numbers where required.")
+
+
+        except TypeError:
+            print("\nUnexpected input type! Please follow the required format.")

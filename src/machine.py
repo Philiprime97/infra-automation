@@ -35,7 +35,7 @@ def save_to_json(data):
             with open(CONFIG_FILE, "w") as file:
                 json.dump(content, file, indent=4)  # Pretty-print JSON
                 logging.info(f"Data successfully saved to {CONFIG_FILE}")
-                print("\nSaving VM configuration...")
+                print("\nSaving VMachine configuration...")
                 print(f"Saved to {CONFIG_FILE}")
                 print("Done!")
         except Exception as e:
@@ -43,8 +43,7 @@ def save_to_json(data):
                 print("Error saving the file.")
 
 
-
-class Machine():
+class VM():
     def __init__(self,Name,OS,CPU,GPU,RAM,Disk,IP):
         self.Name = Name
         self.OS   = OS
@@ -54,7 +53,7 @@ class Machine():
         self.Disk = Disk
         self.IP   = IP
 
-        logging.info(f"Machine Created : {self.to_dict()}")  # every time a single machine is created, it has a record log.
+        logging.info(f"VMachine Created : {self.to_dict()}")  # every time a single machine is created, it has a record log.
         save_to_json([self.to_dict()])                       # every time a single machine is created, it is saved in json and stored in instances.json.
                                                              # I dont need to wait every time i press 'no', so a machine will be loged and saved, it is now doing it immediatly, when a class is being called.
 
@@ -66,7 +65,7 @@ class Machine():
 
 
 
-        # Return the Machine details as a dictionary - 'to_dict' onverts the object's attributes into a dictionary for easy storage and display
+        # Return the Machine details as a dictionary - 'to_dict' converts the object's attributes into a dictionary for easy storage and display
     def to_dict(self):               
         return {
             "Name":self.Name,
