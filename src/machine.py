@@ -4,13 +4,14 @@ import json
 import os
 
 
+# Log format:
 logging.basicConfig(
             filename="logs/provisioning.log",
             level=logging.INFO,
             format="%(asctime)s - %(levelname)s - %(message)s", 
             )
 
-
+# Saving to JSON file:
 def save_to_json(data):
         
         CONFIG_FILE = "configs/instances.json"
@@ -43,6 +44,7 @@ def save_to_json(data):
                 print("Error saving the file.")
 
 
+# Pydantic serves both as a class definition and a validation framework at the same time!
 
 class VMachine(BaseModel):
 
@@ -67,8 +69,6 @@ class VMachine(BaseModel):
                 }
 
 # In Pydantic v2, the regex parameter has been replaced by the 'pattern' parameter in the Field() function.
-# Pydantic serves both as a class definition and a validation framework at the same time!
-
 
 def get_vm_input():
         
