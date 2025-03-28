@@ -16,19 +16,19 @@ def save_to_json(data):
         CONFIG_FILE = "configs/instances.json"
 
         # 1. Ensure the 'configs' folder exists
-        os.makedirs("configs", exist_ok=True)  # exist_ok=True --- checks if 'configs' dir, exists!
-	        # "configs" → The name of the folder to create.
-            # exist_ok=True → If the folder already exists, don’t throw an error.
+        os.makedirs("configs", exist_ok=True)       # exist_ok=True --- checks if 'configs' dir, exists!
+	                                                # "configs" → The name of the folder to create.
+                                                    # exist_ok=True → If the folder already exists, don’t throw an error.
     
         # 2. Try to read existing data from the JSON file
         try:
             with open(CONFIG_FILE, "r") as file:
-                content = json.load(file)  # Load existing data
+                content = json.load(file)           # Load existing data
         except (FileNotFoundError, json.JSONDecodeError):
-            content = []  # If file doesn't exist, start with an empty list
+            content = []                            # If file doesn't exist, start with an empty list
     
         # 3. Add new machine data
-        content.extend(data) #extand - means adding each element from data to content at the end of the list.
+        content.extend(data)                        #extand - means adding each element from data to content at the end of the list.
     
         # 4. Save updated list back to the file
         try:
@@ -82,7 +82,7 @@ def get_vm_input():
         Disk = int(input("Enter Disk Storage in GB (0 - 500) : "))
         IP = input("Enter an IP Adress ( 0-255.0-255.0-255.0-255 ) : ")  # i removed 'int' because pydantuc handles with string automatically.
 
-        # Validate the unputs using pydantic
+        # Validate the inputs using pydantic via the VMachine class
         vm = VMachine(Name=Name,OS=OS,CPU=CPU,GPU=GPU,RAM=RAM,Disk=Disk,IP=IP)
 
         logging.info(f"VMachine Created : {vm.to_dict()}")  # every time a single machine is created, it has a record log.
