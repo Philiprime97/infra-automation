@@ -61,5 +61,253 @@
         "RAM": "23GB",
         "Disk": "32GB",
         "IP": "2.2.2.2"
+    },
+    {
+        "Name": "PC54",
+        "OS": "Mac",
+        "CPU": 3,
+        "GPU": "Nvidia",
+        "RAM": "34GB",
+        "Disk": "54GB",
+        "IP": "4.4.4.4"
+    },
+    {
+        "Name": "pc45",
+        "OS": "Mac",
+        "CPU": 23,
+        "GPU": "AMD",
+        "RAM": "2GB",
+        "Disk": "34GB",
+        "IP": "5.5.5.5"
+    },
+    {
+        "Name": "PC5",
+        "OS": "Mac",
+        "CPU": 43,
+        "GPU": "AMD",
+        "RAM": "34GB",
+        "Disk": "5GB",
+        "IP": "4.4.4.4"
+    },
+    {
+        "Name": "pc7",
+        "OS": "Mac",
+        "CPU": 3,
+        "GPU": "AMD",
+        "RAM": "45GB",
+        "Disk": "43GB",
+        "IP": "3.3.3.3"
+    },
+    {
+        "Name": "PC56",
+        "OS": "Linux",
+        "CPU": 34,
+        "GPU": "Intel",
+        "RAM": "34GB",
+        "Disk": "55GB",
+        "IP": "4.4.4.4"
+    },
+    {
+        "Name": "pc78",
+        "OS": "Windows",
+        "CPU": 45,
+        "GPU": "Nvidia",
+        "RAM": "45GB",
+        "Disk": "43GB",
+        "IP": "6.6.6.6"
+    },
+    {
+        "Name": "pc90",
+        "OS": "Mac",
+        "CPU": 34,
+        "GPU": "Intel",
+        "RAM": "45GB",
+        "Disk": "43GB",
+        "IP": "5.5.5.5"
+    },
+    {
+        "Name": "PC54",
+        "OS": "Linux",
+        "CPU": 34,
+        "GPU": "AMD",
+        "RAM": "34GB",
+        "Disk": "4GB",
+        "IP": "5.5.5.5"
+    },
+    {
+        "Name": "pc43",
+        "OS": "Mac",
+        "CPU": 23,
+        "GPU": "Intel",
+        "RAM": "34GB",
+        "Disk": "53GB",
+        "IP": "4.4.4.4"
+    },
+    {
+        "Name": "pc56",
+        "OS": "Mac",
+        "CPU": 43,
+        "GPU": "Nvidia",
+        "RAM": "45GB",
+        "Disk": "65GB",
+        "IP": "5.5.5.5"
+    },
+    {
+        "Name": "PC45",
+        "OS": "Mac",
+        "CPU": 34,
+        "GPU": "AMD",
+        "RAM": "34GB",
+        "Disk": "54GB",
+        "IP": "6.6.6.6"
+    },
+    {
+        "Name": "pc34",
+        "OS": "Linux",
+        "CPU": 4,
+        "GPU": "AMD",
+        "RAM": "54GB",
+        "Disk": "3GB",
+        "IP": "4.4.4.4"
+    },
+    {
+        "Name": "PC65",
+        "OS": "Mac",
+        "CPU": 3,
+        "GPU": "AMD",
+        "RAM": "35GB",
+        "Disk": "54GB",
+        "IP": "3.3.3.3"
+    },
+    "Name",
+    "OS",
+    "CPU",
+    "GPU",
+    "RAM",
+    "Disk",
+    "IP",
+    "Name",
+    "OS",
+    "CPU",
+    "GPU",
+    "RAM",
+    "Disk",
+    "IP",
+    {
+        "Name": "pc45",
+        "OS": "Mac",
+        "CPU": 34,
+        "GPU": "AMD",
+        "RAM": "34GB",
+        "Disk": "23GB",
+        "IP": "3.3.3.3"
+    },
+    {
+        "Name": "pc65",
+        "OS": "Mac",
+        "CPU": 43,
+        "GPU": "AMD",
+        "RAM": "34GB",
+        "Disk": "43GB",
+        "IP": "5.5.5.5"
+    },
+    {
+        "Name": "server",
+        "OS": "Mac",
+        "CPU": 43,
+        "GPU": "AMD",
+        "RAM": "54GB",
+        "Disk": "45GB",
+        "IP": "5.5.5.5"
+    },
+    {
+        "Name": "server",
+        "OS": "Mac",
+        "CPU": 43,
+        "GPU": "Intel",
+        "RAM": "43GB",
+        "Disk": "43GB",
+        "IP": "5.5.5.5"
+    },
+    {
+        "Name": "server",
+        "OS": "Mac",
+        "CPU": 43,
+        "GPU": "AMD",
+        "RAM": "45GB",
+        "Disk": "54GB",
+        "IP": "5.5.5.5"
+    },
+    {
+        "Name": "server54",
+        "OS": "Mac",
+        "CPU": 43,
+        "GPU": "AMD",
+        "RAM": "43GB",
+        "Disk": "55GB",
+        "IP": "4.4.4.4"
+    },
+    {
+        "Name": "SERVER65",
+        "OS": "Mac",
+        "CPU": 54,
+        "GPU": "AMD",
+        "RAM": "34GB",
+        "Disk": "65GB",
+        "IP": "2.2.2.2"
+    },
+    {
+        "Name": "server",
+        "OS": "Mac",
+        "CPU": 34,
+        "GPU": "AMD",
+        "RAM": "54GB",
+        "Disk": "5GB",
+        "IP": "4.4.4.4"
+    },
+    {
+        "Name": "SERVER65",
+        "OS": "Mac",
+        "CPU": 43,
+        "GPU": "AMD",
+        "RAM": "34GB",
+        "Disk": "32GB",
+        "IP": "3.3.3.3"
+    },
+    {
+        "Name": "SER",
+        "OS": "Mac",
+        "CPU": 43,
+        "GPU": "AMD",
+        "RAM": "43GB",
+        "Disk": "34GB",
+        "IP": "4.4.4.4"
+    },
+    {
+        "Name": "ser",
+        "OS": "Mac",
+        "CPU": 43,
+        "GPU": "AMD",
+        "RAM": "34GB",
+        "Disk": "43GB",
+        "IP": "4.4.4.4"
+    },
+    {
+        "Name": "SER",
+        "OS": "Mac",
+        "CPU": 43,
+        "GPU": "AMD",
+        "RAM": "43GB",
+        "Disk": "54GB",
+        "IP": "4.4.4.4"
+    },
+    {
+        "Name": "ser",
+        "OS": "Mac",
+        "CPU": 54,
+        "GPU": "AMD",
+        "RAM": "23GB",
+        "Disk": "43GB",
+        "IP": "5.5.5.5"
     }
 ]
