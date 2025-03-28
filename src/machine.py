@@ -28,7 +28,7 @@ def save_to_json(data):
             content = []  # If file doesn't exist, start with an empty list
     
         # 3. Add new machine data
-        content.extend(data)
+        content.extend(data) #extand - means adding each element from data to content at the end of the list.
     
         # 4. Save updated list back to the file
         try:
@@ -66,14 +66,14 @@ class VMachine(BaseModel):
                     "IP"  :str(self.IP)
                 }
 
+# In Pydantic v2, the regex parameter has been replaced by the 'pattern' parameter in the Field() function.
+# Pydantic serves both as a class definition and a validation framework at the same time!
 
 
-    # In Pydantic v2, the regex parameter has been replaced by the 'pattern' parameter in the Field() function.
- 
 def get_vm_input():
         
     try:       
-            #  collect user input
+        #  Collect user input
         Name = input("\nEnter a valid VM name in the format : [ VM name - number]: ").strip()
         OS = input("Choose an Operating-System : ( Windows, Linux, Mac ) : ").strip()
         CPU = int(input("Enter the number of cores of the CPU ( 1 - 64 ) : "))
@@ -82,14 +82,12 @@ def get_vm_input():
         Disk = int(input("Enter Disk Storage in GB (0 - 500) : "))
         IP = input("Enter an IP Adress ( 0-255.0-255.0-255.0-255 ) : ")  # i removed 'int' because pydantuc handles with string automatically.
 
-            # validate using pydantic
+        # Validate the unputs using pydantic
         vm = VMachine(Name=Name,OS=OS,CPU=CPU,GPU=GPU,RAM=RAM,Disk=Disk,IP=IP)
 
-        logging.info(f"VMachine Created : {vm.to_dict()}") # every time a single machine is created, it has a record log.
-        save_to_json([vm.to_dict()])                       # every time a single machine is created, it is saved in json and stored in instances.json.
-                                                                 # I dont need to wait every time i press 'no', so a machine will be loged and saved, it is now doing it immediatly, when a class is being called.
-
-            #print("\nVM Created Successfully:\n", vm)
+        logging.info(f"VMachine Created : {vm.to_dict()}")  # every time a single machine is created, it has a record log.
+        save_to_json([vm.to_dict()])                        # every time a single machine is created, it is saved in json and stored in instances.json.
+                                                            # I dont need to wait every time i press 'no', so a machine will be loged and saved, it is now doing it immediatly, when a class is being called.
         return vm
 
 
@@ -100,29 +98,3 @@ def get_vm_input():
             print(f"- {error['loc']}: {error['msg']}")
 
     
-    # except ValueError as e:
-    #     #print(f"error : {e}")
-    #     print("\nInvalid input! Please enter numbers where required.")
-
-    # except TypeError as e:
-    #     #print(f"error : {e}")
-    #     print("\nUnexpected input type! Please follow the required format.")
-
-
-
-#Pydantic serves both as a class definition and a validation framework at the same time!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
