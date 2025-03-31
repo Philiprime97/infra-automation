@@ -1,3 +1,4 @@
+from src.machine import logging
 import subprocess
 
 def install_service1():
@@ -26,13 +27,17 @@ def install_service1():
 def install_service(vm):
     """Install a service on the given VM using the Bash script."""
     service = input(f"\nEnter the service name to install on {vm.Name}: ").strip()
+    logging.info(f"{service} is asked to be installed")
 
     if service:
         print(f"\nInstalling '{service}' on VM: {vm.Name}...")
         result = subprocess.run(["bash", "scripts/service.sh", service], capture_output=True, text=True)
+        logging.info(f"{service} is installing")
 
         if result.returncode == 0:
             print(f"\nService installed successfully on {vm.Name}:")
+            logging.info(f"{service} done installing")
             print(result.stdout.strip())  # Show script output
         else:
             print(f"\nError installing service on {vm.Name}: {result.stderr.strip()}")
+            logging.error(f"{service} was not installed")
