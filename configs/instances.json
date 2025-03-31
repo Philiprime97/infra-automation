@@ -309,5 +309,68 @@
         "RAM": "23GB",
         "Disk": "43GB",
         "IP": "5.5.5.5"
+    },
+    {
+        "Name": "server",
+        "OS": "Mac",
+        "CPU": 34,
+        "GPU": "AMD",
+        "RAM": "34GB",
+        "Disk": "32GB",
+        "IP": "2.2.2.2"
+    },
+    {
+        "Name": "SERVER5",
+        "OS": "Linux",
+        "CPU": 3,
+        "GPU": "Nvidia",
+        "RAM": "54GB",
+        "Disk": "3GB",
+        "IP": "4.4.4.4"
+    },
+    {
+        "Name": "server",
+        "OS": "Mac",
+        "CPU": 54,
+        "GPU": "AMD",
+        "RAM": "45GB",
+        "Disk": "43GB",
+        "IP": "4.4.4.4"
+    },
+    {
+        "Name": "VM-3",
+        "OS": "Mac",
+        "CPU": 54,
+        "GPU": "AMD",
+        "RAM": "43GB",
+        "Disk": "43GB",
+        "IP": "4.4.4.4"
+    },
+    {
+        "Name": "VM-8",
+        "OS": "Windows",
+        "CPU": 43,
+        "GPU": "Nvidia",
+        "RAM": "45GB",
+        "Disk": "43GB",
+        "IP": "6.6.6.6"
+    },
+    {
+        "Name": "server-3",
+        "OS": "Windows",
+        "CPU": 43,
+        "GPU": "AMD",
+        "RAM": "43GB",
+        "Disk": "54GB",
+        "IP": "6.6.6.6"
+    },
+    {
+        "Name": "server-09",
+        "OS": "Linux",
+        "CPU": 43,
+        "GPU": "AMD",
+        "RAM": "43GB",
+        "Disk": "56GB",
+        "IP": "7.7.7.7"
     }
 ]
