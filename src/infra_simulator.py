@@ -1,4 +1,5 @@
 from machine import VMachine,logging,save_to_json
+from pydantic import ValidationError
 from scripts.service import install_service
 
 def main():
@@ -45,6 +46,13 @@ def main():
                 VMs.append(vm)  # Store the VMachine object, not just its dictionary
                 count += 1
                 logging.info(f"VM #{count} created: {vm.to_dict()}")
+
+            
+            except ValidationError as e:
+                logging.error(f"Validation error(s) occurred: {e}")
+                print(f"\nValidation Error(s):")
+                for error in e.errors():
+                    print(f"- {error['loc']}: {error['msg']}")
 
             except Exception as e:
                 logging.error(f"Error creating VM: {e}")

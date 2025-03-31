@@ -91,10 +91,10 @@ class VMachine(BaseModel):
 #         return vm
 
 
-#     except ValidationError as e:
-#         logging.error(f"Validation error(s) occurred: {e}")
-#         print(f"\nValidation Error(s):")
-#         for error in e.errors():
-#             print(f"- {error['loc']}: {error['msg']}")
+    # except ValidationError as e:
+    #      logging.error(f"Validation error(s) occurred: {e}")
+    #      print(f"\nValidation Error(s):")
+    #      for error in e.errors():
+    #          print(f"- {error['loc']}: {error['msg']}")
 
     
