@@ -1,4 +1,5 @@
 from machine import VMachine,logging,save_to_json
+from scripts.service import install_service
 
 def main():
 
@@ -22,7 +23,7 @@ def main():
             
             try:
                 # Collect user input directly
-                Name = input("\nEnter a valid VM name (e.g., VM-1): ").strip()
+                Name = input("\nEnter a valid VM name (ex: VM-1): ").strip()
                 OS = input("Choose an Operating System (Windows, Linux, Mac): ").strip()
                 CPU = int(input("Enter CPU cores (1-64): "))
                 GPU = input("Choose GPU vendor (Nvidia, AMD, Intel): ").strip()
@@ -30,14 +31,14 @@ def main():
                 Disk = int(input("Enter Disk size in GB (1-500): "))
                 IP = input("Enter an IP Address (e.g., 192.168.1.1): ").strip()
 
-                # Create a VM instance using the collected data
+                # Creating a vm instance of a VMachine class 
                 vm = VMachine(Name=Name, OS=OS, CPU=CPU, GPU=GPU, RAM=RAM, Disk=Disk, IP=IP)
 
-            # Save to JSON immediately
+                # Save to JSON immediately
                 save_to_json([vm.to_dict()])
                 #print("\nVM configured and saved successfully!")
 
-
+                install_service(vm)   # installing service on vm
 
 
                 # Store and log the VM instance
