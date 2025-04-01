@@ -372,5 +372,37 @@
         "RAM": "43GB",
         "Disk": "56GB",
         "IP": "7.7.7.7"
+    },
+    {
+        "Name": "VBC",
+        "OS": "Mac",
+        "CPU": 43,
+        "GPU": "AMD",
+        "RAM": "43GB",
+        "Disk": "54GB"
+    },
+    {
+        "Name": "SFGS",
+        "OS": "Linux",
+        "CPU": 43,
+        "GPU": "Intel",
+        "RAM": "43GB",
+        "Disk": "34GB"
+    },
+    {
+        "Name": "vfsd",
+        "OS": "Windows",
+        "CPU": 45,
+        "GPU": "AMD",
+        "RAM": "45GB",
+        "Disk": "43GB"
+    },
+    {
+        "Name": "FDSAF",
+        "OS": "Mac",
+        "CPU": 43,
+        "GPU": "Nvidia",
+        "RAM": "43GB",
+        "Disk": "34GB"
     }
 ]
