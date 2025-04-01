@@ -2,8 +2,7 @@ from machine import VMachine,logging,save_to_json
 from pydantic import ValidationError
 from scripts.main_service import install_service
 
-# I added the __init__.py file because it is a special Python file used to mark a directory as a package.
-# It allows Python to recognize the folder as a module that can be imported.
+
 
 def main():
 
