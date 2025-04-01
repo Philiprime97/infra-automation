@@ -1,6 +1,6 @@
 from machine import VMachine,logging,save_to_json
 from pydantic import ValidationError
-#from scripts.main_service import install_service
+from scripts.main_service import install_service
 
 # I added the __init__.py file because it is a special Python file used to mark a directory as a package.
 # It allows Python to recognize the folder as a module that can be imported.
@@ -42,7 +42,7 @@ def main():
                 save_to_json([vm.to_dict()])
 
                 # installing service on vm
-                #install_service(vm)   
+                install_service(vm)   
 
                 VMs.append(vm)  # Adds the vm that is created to the VMs list.
                 count += 1       
